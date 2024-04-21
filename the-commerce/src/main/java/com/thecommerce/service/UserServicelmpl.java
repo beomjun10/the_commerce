@@ -47,7 +47,7 @@ public class UserServicelmpl implements UserService{
 		Pageable pageable = PageRequest.of(pageNo, pageSize, sorts);
 		Page<User> page = userRepository.findAll(pageable);
 		List<User> userList = page.getContent();
-		List<UserDto> content = userList.stream().map(User -> UserDto.toDto(User)).collect(Collectors.toList()); // 스트림으로 user갹채를 UserDto 객체로 변환하는 정적 메소드를 호출하여 새로운 리스트에 모으는 작업
+		List<UserDto> content = userList.stream().map(User -> UserDto.toDto(User)).collect(Collectors.toList()); // 스트림으로 user객체를 UserDto 객체로 변환하는 정적 메소드를 호출하여 새로운 리스트에 모으는 작업
 		return PageResponse.builder()
 				.userList(content)
 				.pageNo(pageNo)

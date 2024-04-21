@@ -1,6 +1,5 @@
 package com.thecommerce.service;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -8,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.thecommerce.dto.SignRequestDto;
-import com.thecommerce.dto.UpdateDto;
 import com.thecommerce.entity.User;
 import com.thecommerce.repository.UserRepository;
 
@@ -42,7 +40,7 @@ class UserServicelmplTest {
 	@Test
 	@Disabled
 	void testUpdateUser() throws Exception {
-		userService.updateUser("User5", User.builder()
+		userService.updateUser("User1", User.builder()
 									.password("password2")
 									.nickname("호랑나비")
 									.build());
