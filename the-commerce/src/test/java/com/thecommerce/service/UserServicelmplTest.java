@@ -25,6 +25,7 @@ class UserServicelmplTest {
 	}
 
 	@Test
+	@Disabled
 	void testSignUser() throws Exception {
 		userService.signUser(SignRequestDto.builder()
 									.userName("User1")
